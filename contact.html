@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact - My Art Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-black w3-text-white">
+
+  <!-- NAVIGATION -->
+  <div class="w3-top">
+    <div class="w3-bar w3-black w3-large" id="navbar">
+      <!-- Hamburger icon (only visible on small screens) -->
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleNav()">☰</a>
+
+      <!-- Navigation links -->
+      <div id="navLinks" class="w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button w3-mobile">Home</a>
+        <a href="about.html" class="w3-bar-item w3-button w3-mobile">About</a>
+        <a href="portfolio.html" class="w3-bar-item w3-button w3-mobile">Portfolio</a>
+        <a href="contact.html" class="w3-bar-item w3-button w3-mobile">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  function toggleNav() {
+    const links = document.getElementById("navLinks");
+    if (links.classList.contains("w3-show")) {
+      links.classList.remove("w3-show");
+    } else {
+      links.classList.add("w3-show");
+    }
+  }
+  </script>
+
+  <style>
+  #navLinks.w3-show {
+    display: block !important;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    z-index: 999;
+  }
+  </style>
+
+  <div class="w3-content w3-padding-64" style="max-width:800px; margin-top:70px;">
+    <h2>Contact Me</h2>
+
+    <!-- Short Form -->
+    <div class="w3-border w3-padding w3-margin-bottom">
+      <h4>Quick Question</h4>
+      <form class="w3-container">
+        <input class="w3-input w3-border" type="email" placeholder="Enter your email">
+        <button class="w3-button w3-margin-top w3-border">Submit</button>
+      </form>
+    </div>
+
+    <!-- Long Form -->
+    <div class="w3-border w3-padding">
+      <h4>Send a Message</h4>
+      <form class="w3-container">
+        <label>Name</label>
+        <input class="w3-input w3-border" type="text" required>
+
+        <label>Email</label>
+        <input class="w3-input w3-border" type="email" required>
+
+        <label>Subject</label>
+        <input class="w3-input w3-border" type="text">
+
+        <label>Message</label>
+        <textarea class="w3-input w3-border" rows="4"></textarea>
+
+        <button class="w3-button w3-margin-top w3-border">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
